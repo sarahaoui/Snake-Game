@@ -1,11 +1,15 @@
 import { onSnake, expandSnake } from './snake.js'
 import { randomGridPosition } from './grid.js'
+import { foodSound } from './main.js'
 
 let food = getRandomFoodPosition()
-const EXPANSION_RATE = 5
-
+const EXPANSION_RATE = 1
+ export let score=0
+ 
 export function update() {
   if (onSnake(food)) {
+    score += 1
+    foodSound.play()
     expandSnake(EXPANSION_RATE)
     food = getRandomFoodPosition()
   }
