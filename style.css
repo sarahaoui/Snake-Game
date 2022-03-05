@@ -36,11 +36,13 @@ body {
 
 .snake {
 	background-color: red;
+	border: 0.25vmin solid black;
 	border-radius: 20%;
 }
 
 .food {
 	background: yellow;
+	border: 0.25vmin solid black;
 	border-radius: 20%;
 }
 
